@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FirstProject/index.css">
+    
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+          <link rel="stylesheet" href="https://cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header_content">
+            <div class="logo">
+<i class="fa-solid fa-graduation-cap"></i>
+                <div class="">
+                    <h2>ACADEMY AI</h2>
+                    <p>LEARNING PLATFORM</p>
+                </div>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><i class="fa-regular fa-compass"></i><a href="/FirstProject/index.html">HOME</a></li>
+                    <li><i class="fa-solid fa-book-open"></i><a href="/FirstProject/Courses.html">COURSES</a></li>
+                    <li><i class="fa-solid fa-trophy"></i><a href="/FirstProject/Quizzes.html">INTERACTIVE QUIZZES</a></li>
+                    <li><i class="fa-solid fa-brain"></i><a href="/FirstProject/IQ.html">IQ ASSESSMENT</a></li>
+                    <li><i class="fa-solid fa-clipboard-list"></i><a href="/FirstProject/About.html">ABOUT US</a></li>
+                </ul>
+            </div>
+            <div class="rank">
+                <p class="Streak"> <i class="fa-solid fa-fire-flame-curved"></i> 1 DAY STREAK</p>
+                <div class="rank_xp">
+                    <div class="">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="">
+                        <p class="xp-points">RANK XP</p>
+                        <P class="points">0 XP</P>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <i id="menu_btn" class='fa-solid fa-bars'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Header -->
+
+    <div class="Mobile_menu">
+        <div class="Mobile_menu_links">
+                <ul>
+                    <li><i class="fa-regular fa-compass"></i><a href="/FirstProject/index.html">HOME</a></li>
+                    <li><i class="fa-solid fa-book-open"></i><a href="/FirstProject/Courses.html">COURSES</a></li>
+                    <li><i class="fa-solid fa-trophy"></i><a href="/FirstProject/Quizzes.html">INTERACTIVE QUIZZES</a></li>
+                    <li><i class="fa-solid fa-brain"></i><a href="/FirstProject/IQ.html">IQ ASSESSMENT</a></li>
+                    <li><i class="fa-solid fa-clipboard-list"></i><a href="/FirstProject/About.html">ABOUT US</a></li>
+                </ul>
+            </div>
+            <div class="Mobile_menu_rank">
+                <p class="Streak"> <i class="fa-solid fa-fire-flame-curved"></i> 1 DAY STREAK</p>
+                <div class="rank_xp">
+                    <div class="">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="">
+                        <p class="xp-points">RANK XP</p>
+                        <P class="points">0 XP</P>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+<section class="quiz_section ">
+   <div class="quiz_main_section">
+    <div class="quiz_first_section">
+        <span>INTERACTIVE ARENA</span>
+        <h2>Quiz Arena</h2>
+        <p>Select an academic topic to assess your comprehension, capture feedback, and unlock elite milestone trophies.</p>
+    </div>
+    <div class="quiz_cards">
+         <div class="quiz_first_card">
+            <span class='quiz_span'>Mathematics</span>
+            <h2>Mathematics Mastery Quiz</h2>
+            <p> Contains 5 critical thinking multiple choice queries with explanation reports.</p>
+            
+            <button onclick="startQuiz('Mathematics')" class="quiz-trigger-btn" data-subject="Mathematics" >Start Assessments Track </button>
+         </div>
+         <div class="quiz_second_card">
+            <span class='quiz_span'>English Communication</span>
+            <h2>English Communication Quiz</h2>
+            <p>Contains 5 critical thinking multiple choice queries with explanation reports.</p>
+            <button class="quiz-trigger-btn" data-subject="English" onclick="startQuiz('EnglishCommunication')" >Start Assessments Track > </button>
+         </div>
+         <div class="quiz_third_card">
+            <span class='quiz_span'>Computer Science</span>
+            <h2>Computer Science Fundamentals Quiz</h2>
+            <p>Contains 5 critical thinking multiple choice queries with explanation reports.</p>
+            <button class="quiz-trigger-btn" data-subject="Computer" onclick="startQuiz('ComputerScience')">Start Assessments Track > </button>
+         </div>
+         <div class="quiz_forth_card">
+            <span class='quiz_span'>Science</span>
+            <h2>Science Excellence Quiz</h2>
+            <p>Contains 5 critical thinking multiple choice queries with explanation reports.</p>
+            <button class="quiz-trigger-btn" data-subject="Science" onclick="startQuiz('science')">Start Assessments Track > </button>
+         </div>
+    </div>
+   </div>
+</section>
+
+
+
+<!-- Quiz Section -->
+
+<div class="quiz_arena hide ">
+        <div class="quiz_arena_first_section">
+            <a href="/FirstProject/Quizzes.html">Leave Quiz</a>
+            <h2 id="quiz_arena_heading"></h2>
+            <p id="Number_counter"></p>
+        </div>
+        <div class="quiz_screen " >
+            <h2 id="subject_title"></h2>
+            <p id="question_number"></p>
+            <h3 id="question"></h3>
+            <div class="answers">
+            </div>
+            <div class="">
+                <button class="next-btn hide">Next Question</button>
+                 <p id="explanation"></p>
+            </div>
+
+        </div>
+        <div class="result_screen hide" >
+            <h1>Quiz Completed</h1>
+            <h2 id="score"></h2>
+            <button id="backQuiz">Back to Quizes</button>
+        </div>
+</div>
+
+
+    <footer>
+        <div class="footer">
+           <div class="footer_first_section">
+            <h2>ACADEMY PLATFORM</h2>
+            <p>Unlock your potential and shape your future with expertly structured courses, logic quizzes, and cognitive IQ profiles. Built for student excel.</p>
+           </div>
+           <div class="footer_second_section">
+            <h2>CURRICULUMS</h2>
+            <ul>
+                <li>Mathematics Mastery</li>
+                <li>English Communication</li>
+                <li>Computer Science Fundamentals</li>
+                <li>Science Excellence</li>
+            </ul>
+           </div>
+           <div class="footer_third_section">
+            <h2>Academic Integrity</h2>
+            <span>Assigned logged credentials: **kshahsawar210@gmail.com**</span>
+            <span>All progress locally synced to secure workspace caches.</span>
+            <p>© 2026 Academy Learning Center. All rights reserved.</p>
+           </div>
+        </div>
+    </footer>
+    
+</body>
+<script  src="/FirstProject/subquizes.js"></script>
+<script  src="/FirstProject/index.js">
+</script>
+</html>
