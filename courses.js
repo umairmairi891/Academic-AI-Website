@@ -223,7 +223,8 @@ function subsyllabus(id) {
     alert("Syllabus content for this course is not available yet.");
     return;
   }
-
+  console.log(selectedCourse);
+  
   coursesParentSection.classList.add('hide');
   subcoursesSectin.classList.remove('hide');
 
@@ -231,6 +232,7 @@ function subsyllabus(id) {
     .filter(([key]) => key.startsWith('lessons'))
     .map(([, lesson]) => lesson);
   
+console.log(course);
 
   
   renderSubheadingList();
@@ -253,7 +255,6 @@ function renderSubheadingList() {
 function showLessonDetails(index) {
   const lesson = course[index];
   if (!lesson) return;
-  console.log(lesson.heading);
   courseBtn.innerHTML=lesson.heading
   
   lessonContent.innerHTML = `
