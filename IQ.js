@@ -46,6 +46,11 @@ A) Triangle (3 edges) B) Cube (12 edges) C) Hexagon (6 edges) D) Octagon (8 edge
         mcqs:['0 Degrees','7.5 Degrees','15 Degrees','12.5 Degrees'],
         answer:'7.5 Degrees'
     },
+    {
+        question:"If a digital clock reads 3:15. What is the precise angle degree between the hour hand and the minute hand?",
+        mcqs:['0 Degrees','7.5 Degrees','15 Degrees','12.5 Degrees'],
+        answer:'7.5 Degrees'
+    },
 ]
 
 
@@ -60,6 +65,8 @@ const resultScore=document.getElementById('result_score')
 const backBtn=document.getElementById('back_to_IQ')
 const timerheading=document.getElementById('timer')
 const questionNumber=document.querySelector('.question_number')
+
+
 let currentIndex=0
 let IQscore=0
 let IntervalId=null
@@ -99,6 +106,8 @@ function startIQtest(){
 }
 
 function showQuiz(){
+    console.log(currentIndex);
+    
     let questionData=IQ[currentIndex]
     questionNumber.innerHTML=`${currentIndex+1} / ${IQ.length}`
     IQ_quiz_question.innerHTML=questionData.question

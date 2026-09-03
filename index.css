@@ -2420,3 +2420,276 @@ font-family: 'Arial Narrow Bold', sans-serif;
     width: 80%;
 }
 }
+
+
+
+@media (max-width:768px) {
+    .header_content{
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    .links , .rank{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .hero{
+        height: auto;
+        padding: 0;
+    }
+    .hero  .main_section{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: start;
+        width: 80%;
+        height: 1000px;
+        margin: 1px 50px;
+    }
+    .content_section{
+        max-width: 100%;
+    }
+    .content_section h1{
+      font-size: 25px;
+    }
+    .second_btn{
+        margin-top: 10px;
+    }
+    .img_section{
+        margin-top: 0px;
+    }
+    .why_choose{
+        padding: 15px 15px;
+        height: auto;
+        overflow: hidden;
+    }
+    .why_choose .why_choose_main_content{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .why_choose_content{
+        grid-template-columns: 1fr;
+    }
+    .why_choose_content .second_section{
+         margin-top: 10px;
+        grid-template-columns: 1fr;
+    }
+    .why_choose_content .first_section h1{
+        font-size: 30px;
+    }
+    #courses_second_para{
+        padding: 0px 20px;
+    }
+    .courses_overview .courses_main_content{
+        height: auto;
+    }
+    .courses_overview .courses_main_content .courses_cards{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .IQ_section{
+        width: 90%;
+        margin-top: 50px;
+    }
+.IQ_main_section{
+    flex-direction: row;
+ margin: 0 10px;
+ margin-top: 20px;
+}
+.IQ_main_section .IQ_first_section{
+    width: 360px;
+    /* margin-top: 50px; */
+    height: auto;
+}
+.IQ_main_section .IQ_second_section{
+    width: 360px;
+    /* margin-top: 10px; */
+    height: auto;
+}
+.review_section .review_main_section{
+    flex-direction: column;
+}
+.review_first_section{
+    flex-direction: column;
+}
+.review_second_section{
+    grid-template-columns: 1fr;
+    margin: 10px 0px;
+}
+.review_section .review_main_section{
+    align-items: start;
+}
+
+.review_second_section .review_first_card, .review_second_card, .review_third_card{
+    width: 90%;
+}
+.learning_section{
+    margin-top: 10px;
+}
+.learning_main_content{
+    height: auto;
+    width: 90% ;
+    margin: 5px 10px;
+    padding: 10px 10px;
+}
+.learning_main_content h2{
+    font-size: 20px;
+}
+.learning_main_content p{
+    font-size: 13px;
+}
+.learning_main_content #learning_first_button{
+
+  font-size: 10px;
+}
+.learning_main_content #learning_second_button{
+
+    font-size: 10px;
+}
+.footer{
+    grid-template-columns: 1fr;
+}
+.footer_third_section h2{
+    text-align: start;
+}
+.footer_third_section span{
+    text-align: start;
+}
+.footer_third_section p{
+    text-align: start;
+}
+.courses_filter_main_section .filter_list ul{
+    margin: 0 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.filter_cards{
+    margin: 0px 10px;
+}
+.subcourses_section{
+    margin: 10px 30px;
+}
+.subcourses_second_section{
+    padding: 0;
+    grid-template-columns: 1fr ;
+    width: 100%;
+    gap: 2px;
+}
+.subheading-item{
+    width: 100%;
+}
+.lesson_content{
+    margin-top: 20px;
+    padding: 20px 20px;
+}
+.subcourses_first_section {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+}
+.subcourses_first_section button{
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+.subcourses_first_section button a{
+    text-decoration: none;
+   color: black;
+   word-spacing: 2px;
+}
+.filter_content{
+    grid-template-columns: 1fr 1fr;
+}
+.about_courses_section{
+    margin: 20px 10px;
+}
+.about_courses_content_section{
+    flex-direction: column;
+}
+.courses_first_section h2{
+    font-size: 22px;
+}
+.course_second_section {
+    width: 90%;
+}
+.course_second_section ul{
+    gap: 20px;
+    }
+    .student_section{
+        margin: 40px 10px;
+    }
+.student_second_section{
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.quiz_first_section p{
+  padding: 0 10px;
+}
+.quiz_cards{
+    grid-template-columns: 1fr;
+    padding: 0px 10px;
+}
+.IQ_assessment_second_section{
+    width: 80%;
+    margin: 10px auto;
+}
+.IQ_assessment_second_section h2{
+   font-size: 15px;
+}
+.IQ_assessment_first_section h2{
+    font-size: 22px;
+}
+.IQ_assessment_first_section p{
+    font-size: 16px;
+    padding: 0px 10px;
+}
+.IQ_inner_div{
+    grid-template-columns: 1fr;
+}
+.IQ_inner_div h2{
+    font-size: 16px;
+}
+.about_hero_section h2{
+  font-size: 22px;
+}
+.about_hero_section #heading_span{
+    font-size: 22px;
+}
+.about_hero_section  p{
+    font-size: 15px;
+}
+.vision_section{
+    flex-direction: row;
+    margin: 0px 10px;
+}
+.vision_first_section{
+    width: 300px;
+    padding: 25px 25px;
+}
+.vision_second_section{
+    width: 300px;
+    padding: 25px 25px;
+}
+.success{
+    margin: 20px 10px;
+}
+.success_section{
+    flex-direction: column;
+    margin: 0px 10px;
+}
+.subcourses_section{
+    margin-top: 15%;
+}
+
+.filter_line{
+    margin: 20px 40px;
+    width: 80%;
+}
+}
