@@ -6,9 +6,21 @@ menu_btn.addEventListener('click',()=>{
 })
 
 
+ const LocalPoints=parseInt(localStorage.getItem('points')) || []
+ 
+ let totoalNum=0
+ LocalPoints + totoalNum
+ console.log(totoalNum);
+ 
+ 
+    
+ 
 
 
 
+const points=document.querySelector('.points')
+
+points.innerHTML=`${LocalPoints}   XP`
   const   mcqs = [{
     Mathematics: [
         {
@@ -185,7 +197,7 @@ if(lastVisit){
     const differentTime=currentDate-lastDate
     
     const days=differentTime/(1000*60*60*24)
-    console.log(days);
+    
     if(days===1){
         streak+=1
     }else{
@@ -223,6 +235,7 @@ let score=0;
 
 
 function startQuiz(subject) {
+    score=0
     SelectSubject=subject
     question=mcqs[0][subject]
     currentQuestion=0;
@@ -259,7 +272,6 @@ function selectAnswer(btn, selectAnswer){
    button.forEach((btn)=>{
         return btn.disabled=true
    })
-   console.log(selectAnswer, questionData.answer);
    
    if(selectAnswer===questionData.answer){
     btn.classList.add('correct')
@@ -283,10 +295,15 @@ function nextQuestion(){
 next_btn.addEventListener('click', nextQuestion)
 
 function showResult(){
+
     quizarenafirstsection.classList.add('hide')
     result_screen.classList.remove('hide')
     quiz_screen.classList.add('hide')
     document.getElementById('score').innerHTML=`Your Score is ${score}`
+
+    localStorage.setItem('points', score)
+
+
 }
 
 backQuiz.addEventListener('click',()=>{

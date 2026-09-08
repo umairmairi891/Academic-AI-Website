@@ -63,10 +63,7 @@ header{
     margin-right: 10px;
     size: 15px;
 }
-  .active{
-    color:blue;
-    background-color: gray;
-}
+ 
 .rank{
     display: flex;
     align-items: center;
@@ -250,6 +247,10 @@ justify-content: space-around;
   border-radius: 3px;
   cursor: pointer;
 }
+.first_btn a{
+    color: white;
+    text-decoration: none;
+}
 .btn .first_btn:hover{
     background-color: rgb(37, 37, 75);
       transition: background-color 0.3s ease;
@@ -265,6 +266,10 @@ justify-content: space-around;
   border-radius: 3px;
   margin-left: 5px;
   cursor: pointer;
+}
+.second_btn a{
+    color: blue;
+    text-decoration: none;
 }
 .btn .second_btn:hover{
     background-color: rgb(159, 206, 223);
@@ -494,7 +499,7 @@ font-weight: bold;
 }
 .courses_cards button{
   padding: 10px 15px;
-  background-color: rgb(186, 187, 189);
+  background-color: white;
   border:1px solid gray;
   font-size: 10px;
   margin-top: 10px;
@@ -1308,9 +1313,7 @@ footer{
     border-radius: 3px;
     cursor: pointer;
 }
-.active{
-    color: blue;
-}
+
 .filter_line{
     text-align: center;
     width: 90%;
@@ -1341,6 +1344,7 @@ footer{
     border-radius: 5px;  
     animation: filter_cards_animation 1s linear;
 }
+
 @keyframes filter_cards_animation {
     0%{
         transform: translateY(10%);
@@ -1351,6 +1355,7 @@ footer{
         opacity: 100;
     }
 }
+
 .filter_inner_cards span{
     font-size: 13px;
     color: gray;
@@ -1691,6 +1696,10 @@ max-width: 500px;
     border-radius: 3px;
     cursor: pointer;
     width: 100%;
+}
+.subheading-text{
+    font-weight: bold;
+    font-size: 15px;
 }
 .duration{
     display: block;
@@ -2423,7 +2432,7 @@ font-family: 'Arial Narrow Bold', sans-serif;
 
 
 
-@media (max-width:768px) {
+@media (min-width:547px) and (max-width:768px) {
     .header_content{
         justify-content: space-between;
         padding: 0px 20px;

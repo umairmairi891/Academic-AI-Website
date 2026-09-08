@@ -1,5 +1,5 @@
 const courses = [
-  { id: 1, span: 'Mathematics', heading: 'Mathematics Mastery', rating: '4.8', level: 'Beginner', paragraph: 'Build strong mathematical foundations and improve analytical thinking', lessons: '4 Micro Lessons', duration: '6 Hours Duration', progress: '0%', button: "Enroll & Start Learning " },
+  { id: 1, span: 'Mathematics', headbutton:'Enrolled',  heading: 'Mathematics Mastery', rating: '4.8', level: 'Beginner', paragraph: 'Build strong mathematical foundations and improve analytical thinking', lessons: '4 Micro Lessons', duration: '6 Hours Duration', progress: '0%', button: "Enroll & Start Learning " },
   { id: 2, span: 'English Communication', heading: 'English Communication', rating: '4.7', level: 'Beginner', paragraph: 'Enhance speaking, writing, and comprehension skills', lessons: '3 Micro Lessons', duration: '5 Hours Duration', progress: '0%', button: "Enroll & Start Learning " },
   { id: 3, span: 'Computer Science', heading: 'Computer Science Fundamentals', rating: '4.9', level: 'Intermediate', paragraph: 'Learn technology concepts that prepare you for the digital world', lessons: '3 Micro Lessons', duration: '7 Hours Duration', progress: '0%', button: "Enroll & Start Learning " },
   { id: 4, span: 'Science', heading: 'Science Excellence', rating: '4.6', level: 'Beginner', paragraph: 'Understand scientific principles through engaging lessons and examples.', lessons: '3 Micro Lessons', duration: '5 Hours Duration', progress: '0%', button: "Enroll & Start Learning " },
@@ -193,7 +193,9 @@ filter_cards.innerHTML = `
 <div class='filter_content'>
   ${courses.map((item) => `
     <div class='filter_inner_cards'> 
-      <span class='card_span'>${item.span}</span>
+    <div class='cards_heading'>
+    <span class='card_span'>${item.span}</span>
+    </div>
       <div class='filter_cards_heading'>
         <h2>${item.heading}</h2>
         <div class='filter_rating'>
@@ -215,7 +217,7 @@ filter_cards.innerHTML = `
 </div>
 `;
 
-
+const card_button =document.querySelector('.card_button')
 function subsyllabus(id) {
   const selectedCourse = syllabus.find(item => item.id === Number(id));
 
@@ -223,8 +225,6 @@ function subsyllabus(id) {
     alert("Syllabus content for this course is not available yet.");
     return;
   }
-  console.log(selectedCourse);
-  
   coursesParentSection.classList.add('hide');
   subcoursesSectin.classList.remove('hide');
 
