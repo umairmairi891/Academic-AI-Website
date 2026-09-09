@@ -70,6 +70,7 @@ const questionNumber=document.querySelector('.question_number')
 let currentIndex=0
 let IQscore=0
 let IntervalId=null
+
 function timer(duration=360){
 let timeRemaining=duration
  clearInterval(IntervalId)
